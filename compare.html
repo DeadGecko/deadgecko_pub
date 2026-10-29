@@ -1,12 +1,12 @@
 <!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>Samhain Variant Compare</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
 <style>
 /* Index: one-screen grid of all six, hosts as wide rows, guests 2-up. Tap opens a full detail view. Single dark look, deliberate. */
 :root{
   --bg:#141413; --ink:#F2E9DC; --muted:#B8AC9C; --cern:#C97B4A; --cail:#8FAE82;
   --card:#1E1D1A; --line:#332B23;
-  --display:'Fraunces',Georgia,serif; --body:'Work Sans',system-ui,sans-serif;
+  --display:'Fraunces',Georgia,serif; --body:'Source Serif 4',Georgia,serif;
   color-scheme:dark;
 }
 *{box-sizing:border-box}
@@ -17,7 +17,7 @@ body{background:var(--bg);color:var(--ink);font-family:var(--body)}
 .mark{width:64px;height:64px;flex:none}
 .mark .ret{transition:transform .5s ease}
 .mark.far .ret{transform:translateY(-140px)}
-.eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--cern)}
+.eyebrow{font-size:14px;letter-spacing:.14em;font-variant-caps:all-small-caps;color:var(--cern)}
 h1{font-family:var(--display);font-weight:600;font-size:40px;line-height:1;margin:2px 0 0}
 .switch{display:flex;border:1px solid var(--line);border-radius:999px;padding:3px;background:var(--card)}
 .switch button{flex:1;min-height:44px;font:600 14px var(--body);color:var(--muted);background:none;border:0;border-radius:999px;cursor:pointer}
@@ -32,9 +32,10 @@ h1{font-family:var(--display);font-weight:600;font-size:40px;line-height:1;margi
 .pending{display:grid;place-items:center;background:radial-gradient(circle at 50% 40%,color-mix(in srgb,var(--c) 24%,var(--card)),var(--card) 72%)}
 .pending span{font-family:var(--display);font-style:italic;font-size:13px;color:var(--muted);margin-bottom:28px}
 .cap{position:absolute;left:0;right:0;bottom:0;padding:22px 12px 9px;background:linear-gradient(transparent,rgba(12,11,10,.88) 55%);display:flex;align-items:baseline;gap:8px}
-.vn{font-size:11px;font-weight:600;letter-spacing:.14em;color:var(--c)}
+.vn{font-size:13px;font-weight:600;letter-spacing:.12em;font-variant-caps:all-small-caps;color:var(--c)}
 .nm{font-family:var(--display);font-weight:600;font-size:16px;line-height:1.1;color:var(--ink)}
 .wide .nm{font-size:30px}
+.knotrow{content:'';display:block;height:24px;margin:0 0 10px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-13 -13 26 26'%3E%3Cg fill='none' stroke='%238A7F72' stroke-width='1.1'%3E%3Cpath d='M0.00,-12.26 A10.0,10.0 0 0 1 -0.00,5.06 A10.0,10.0 0 0 1 0.00,-12.26Z'/%3E%3Cpath d='M10.62,6.13 A10.0,10.0 0 0 1 -4.38,-2.53 A10.0,10.0 0 0 1 10.62,6.13Z'/%3E%3Cpath d='M-10.62,6.13 A10.0,10.0 0 0 1 4.38,-2.53 A10.0,10.0 0 0 1 -10.62,6.13Z'/%3E%3Ccircle r='5.4'/%3E%3C/g%3E%3C/svg%3E") center/24px 24px no-repeat,linear-gradient(var(--line),var(--line)) left center/calc(50% - 22px) 1px no-repeat,linear-gradient(var(--line),var(--line)) right center/calc(50% - 22px) 1px no-repeat}
 .foot{font-size:12px;letter-spacing:.03em;color:var(--muted);line-height:1.5}
 
 .detail{--c:var(--cern);display:flex;flex-direction:column;gap:12px}
@@ -44,11 +45,12 @@ h1{font-family:var(--display);font-weight:600;font-size:40px;line-height:1;margi
 .dp.pending{display:grid}
 .dp.pending span{margin:0;font-size:16px}
 .dbody{display:flex;flex-direction:column;gap:8px}
-.role{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--c)}
+.role{font-size:15px;letter-spacing:.12em;font-variant-caps:all-small-caps;color:var(--c)}
 .dname{font-family:var(--display);font-weight:600;font-size:40px;line-height:1;margin:0;color:var(--c)}
 .char{font-family:var(--display);font-style:italic;font-size:18px;line-height:1.4;margin:0}
 .taste{font-size:16px;line-height:1.5;margin:0}
-.spec{font-size:14px;line-height:1.4;color:var(--muted);border-top:1px solid var(--line);padding-top:10px;margin:0}
+.spec{font-size:15px;line-height:1.4;color:var(--muted);margin:0}
+.spec::before{content:'';display:block;height:24px;margin:2px 0 10px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-13 -13 26 26'%3E%3Cg fill='none' stroke='%238A7F72' stroke-width='1.1'%3E%3Cpath d='M0.00,-12.26 A10.0,10.0 0 0 1 -0.00,5.06 A10.0,10.0 0 0 1 0.00,-12.26Z'/%3E%3Cpath d='M10.62,6.13 A10.0,10.0 0 0 1 -4.38,-2.53 A10.0,10.0 0 0 1 10.62,6.13Z'/%3E%3Cpath d='M-10.62,6.13 A10.0,10.0 0 0 1 4.38,-2.53 A10.0,10.0 0 0 1 -10.62,6.13Z'/%3E%3Ccircle r='5.4'/%3E%3C/g%3E%3C/svg%3E") center/24px 24px no-repeat,linear-gradient(var(--line),var(--line)) left center/calc(50% - 22px) 1px no-repeat,linear-gradient(var(--line),var(--line)) right center/calc(50% - 22px) 1px no-repeat}
 @media(prefers-reduced-motion:reduce){.mark .ret{transition:none}}
 </style>
 
@@ -131,6 +133,7 @@ h1{font-family:var(--display);font-weight:600;font-size:40px;line-height:1;margi
   </div>
 
   <section id="index">
+    <div class="knotrow" aria-hidden="true"></div>
     <div class="grid">
 <a class="tile cern wide" style="--c:#5FA38C" href="#cernunnos" aria-label="Cernunnos">
   <img class="tp" src="img/cernunnos.jpg" alt="Cernunnos: antlered man with moss and root beard, amber eyes" style="object-position:50% 42%">
