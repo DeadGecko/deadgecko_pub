@@ -271,7 +271,8 @@ h1{font-family:var(--display);font-weight:600;font-size:40px;line-height:1;margi
   window.addEventListener('hashchange',route);
 
   var start=null;try{start=localStorage.getItem('samhain-set');}catch(err){}
-  if(start==='nothc')show('nothc');
+  var q=(location.search.match(/[?&]set=(thc|nothc)/)||[])[1]; if(q)start=q;
+  if(start==='nothc')show('nothc'); else if(start==='thc')show('thc');
   route();
 })();
 </script>
