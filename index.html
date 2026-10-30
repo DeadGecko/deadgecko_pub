@@ -31,8 +31,9 @@ h3{font-family:var(--display);font-weight:600;font-size:22px;line-height:1.05;ma
 .wide h3{font-size:32px}
 .cb p{font-size:14.5px;line-height:1.5;margin:0;text-wrap:pretty}
 .go{align-self:flex-start;min-height:44px;display:inline-flex;align-items:center;font:600 14px var(--body);color:var(--c);text-decoration:none}
-.all{display:flex;align-items:center;justify-content:center;min-height:52px;margin-top:8px;border-radius:999px;background:var(--ink);color:var(--bg);font:600 16px var(--body);text-decoration:none}
-.go:focus-visible,.all:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.foot{display:flex;flex-wrap:wrap;justify-content:center;column-gap:28px;margin-top:16px;padding-top:8px;border-top:1px solid var(--line)}
+.foot a{min-height:44px;display:inline-flex;align-items:center;font:600 16px var(--body);color:var(--ink);text-decoration:none}
+.go:focus-visible,.foot a:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
 .note{font-family:var(--display);font-style:italic;font-size:14px;line-height:1.45;color:var(--muted);margin:-4px 0 0;text-wrap:pretty}
 .fine{font-size:12px;line-height:1.5;color:var(--muted);margin:6px 0 0}
 </style></head>
@@ -171,6 +172,5 @@ h3{font-family:var(--display);font-weight:600;font-size:22px;line-height:1.05;ma
   </div>
 </article>
 
-  <a class="all" href="compare.html">All six, side by side &rarr;</a>
-  <a class="all" href="drinks.html" style="background:none;color:var(--ink);border:1px solid var(--muted);margin-top:0">The drinks &rarr;</a>
+  <nav class="foot"><a href="compare.html">Compare all six &rarr;</a><a href="drinks.html">The drinks &rarr;</a></nav>
 </main></body></html>
